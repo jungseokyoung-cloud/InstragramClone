@@ -56,17 +56,17 @@ extension MainViewController : UITableViewDataSource, UITableViewDelegate {
         }
     }
     
-    // height 지정 가능
-//        func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//            switch indexPath.section {
-//            case 0:
-//                return 60
-//            case 1:
-//                return 700
-//            default:
-//                return 0
-//            }
-//        }
+//     height 지정 가능
+        func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+            switch indexPath.section {
+            case 0:
+                return 60
+            case 1:
+                return 696
+            default:
+                return 0
+            }
+        }
     
 
     

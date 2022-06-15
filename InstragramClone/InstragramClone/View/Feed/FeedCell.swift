@@ -9,6 +9,7 @@ import UIKit
 
 class FeedCell: UITableViewCell {
 
+    @IBOutlet weak var lableView: UIView!
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var postImageView: UIImageView!
     @IBOutlet weak var userNameLable: UILabel!
@@ -23,7 +24,7 @@ class FeedCell: UITableViewCell {
     
     func printCell() {
         print(postImageView.bounds.height)
-        
+        print(lableView.bounds.height)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

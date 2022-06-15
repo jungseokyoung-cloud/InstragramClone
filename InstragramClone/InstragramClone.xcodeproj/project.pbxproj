@@ -13,7 +13,6 @@
 		FE3EC722284F558F0075F81C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE3EC720284F558F0075F81C /* Main.storyboard */; };
 		FE3EC725284F558F0075F81C /* InstragramClone.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FE3EC723284F558F0075F81C /* InstragramClone.xcdatamodeld */; };
 		FE3EC72A284F55910075F81C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE3EC728284F55910075F81C /* LaunchScreen.storyboard */; };
-		FE3EC734284F59690075F81C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE3EC733284F59690075F81C /* Assets.xcassets */; };
 		FEB8B1882859B5B50010C6ED /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB8B1872859B5B50010C6ED /* Constant.swift */; };
 		FEB8B1992859C2E30010C6ED /* StoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB8B1972859C2E30010C6ED /* StoryCell.swift */; };
 		FEB8B19A2859C2E30010C6ED /* StoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEB8B1982859C2E30010C6ED /* StoryCell.xib */; };
@@ -22,6 +21,7 @@
 		FEB8B1A32859C7770010C6ED /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB8B1A12859C7770010C6ED /* FeedCell.swift */; };
 		FEB8B1A42859C7770010C6ED /* FeedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEB8B1A22859C7770010C6ED /* FeedCell.xib */; };
 		FEB8B1A8285A04700010C6ED /* InstragramPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB8B1A7285A046F0010C6ED /* InstragramPost.swift */; };
+		FEF95C4C285A334900D60766 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEF95C4B285A334800D60766 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +33,6 @@
 		FE3EC724284F558F0075F81C /* InstragramClone.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = InstragramClone.xcdatamodel; sourceTree = "<group>"; };
 		FE3EC729284F55910075F81C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE3EC72B284F55910075F81C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FE3EC733284F59690075F81C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../../../Downloads/AppIcons/Assets.xcassets; sourceTree = "<group>"; };
 		FEB8B1872859B5B50010C6ED /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		FEB8B1972859C2E30010C6ED /* StoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCell.swift; sourceTree = "<group>"; };
 		FEB8B1982859C2E30010C6ED /* StoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoryCell.xib; sourceTree = "<group>"; };
@@ -42,6 +41,7 @@
 		FEB8B1A12859C7770010C6ED /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		FEB8B1A22859C7770010C6ED /* FeedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedCell.xib; sourceTree = "<group>"; };
 		FEB8B1A7285A046F0010C6ED /* InstragramPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstragramPost.swift; sourceTree = "<group>"; };
+		FEF95C4B285A334800D60766 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,10 +80,10 @@
 				FEB8B1A9285A04770010C6ED /* Model */,
 				FE3EC731284F55FD0075F81C /* Controller */,
 				FE3EC732284F56270075F81C /* View */,
-				FE3EC733284F59690075F81C /* Assets.xcassets */,
 				FE3EC728284F55910075F81C /* LaunchScreen.storyboard */,
 				FE3EC72B284F55910075F81C /* Info.plist */,
 				FE3EC723284F558F0075F81C /* InstragramClone.xcdatamodeld */,
+				FEF95C4B285A334800D60766 /* Assets.xcassets */,
 			);
 			path = InstragramClone;
 			sourceTree = "<group>";
@@ -194,9 +194,9 @@
 			files = (
 				FEB8B1A02859C35D0010C6ED /* MyCollectionViewCell.xib in Resources */,
 				FE3EC72A284F55910075F81C /* LaunchScreen.storyboard in Resources */,
-				FE3EC734284F59690075F81C /* Assets.xcassets in Resources */,
 				FEB8B1A42859C7770010C6ED /* FeedCell.xib in Resources */,
 				FEB8B19A2859C2E30010C6ED /* StoryCell.xib in Resources */,
+				FEF95C4C285A334900D60766 /* Assets.xcassets in Resources */,
 				FE3EC722284F558F0075F81C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
