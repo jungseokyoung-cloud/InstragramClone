@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CEF42A9D285A3B040022DDEE /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF42A9C285A3B040022DDEE /* SearchViewController.swift */; };
+		CEF42AA5285A3FCC0022DDEE /* SearchCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEF42AA3285A3FCC0022DDEE /* SearchCollectionViewCell.xib */; };
+		CEF42AA6285A3FCC0022DDEE /* SearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF42AA4285A3FCC0022DDEE /* SearchCollectionViewCell.swift */; };
 		FE3EC71B284F558F0075F81C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3EC71A284F558F0075F81C /* AppDelegate.swift */; };
 		FE3EC71D284F558F0075F81C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3EC71C284F558F0075F81C /* SceneDelegate.swift */; };
 		FE3EC71F284F558F0075F81C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3EC71E284F558F0075F81C /* MainViewController.swift */; };
@@ -25,6 +28,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CEF42A9C285A3B040022DDEE /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		CEF42AA3285A3FCC0022DDEE /* SearchCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchCollectionViewCell.xib; sourceTree = "<group>"; };
+		CEF42AA4285A3FCC0022DDEE /* SearchCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewCell.swift; sourceTree = "<group>"; };
 		FE3EC717284F558F0075F81C /* InstragramClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstragramClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE3EC71A284F558F0075F81C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE3EC71C284F558F0075F81C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +61,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CEF42AA2285A3E140022DDEE /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				CEF42AA4285A3FCC0022DDEE /* SearchCollectionViewCell.swift */,
+				CEF42AA3285A3FCC0022DDEE /* SearchCollectionViewCell.xib */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
 		FE3EC70E284F558F0075F81C = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				FE3EC71E284F558F0075F81C /* MainViewController.swift */,
+				CEF42A9C285A3B040022DDEE /* SearchViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -102,6 +118,7 @@
 				FE3EC720284F558F0075F81C /* Main.storyboard */,
 				FEB8B1A52859D3390010C6ED /* Story */,
 				FEB8B1A62859D6800010C6ED /* Feed */,
+				CEF42AA2285A3E140022DDEE /* Search */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -192,6 +209,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEF42AA5285A3FCC0022DDEE /* SearchCollectionViewCell.xib in Resources */,
 				FEB8B1A02859C35D0010C6ED /* MyCollectionViewCell.xib in Resources */,
 				FE3EC72A284F55910075F81C /* LaunchScreen.storyboard in Resources */,
 				FEB8B1A42859C7770010C6ED /* FeedCell.xib in Resources */,
@@ -208,7 +226,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEF42A9D285A3B040022DDEE /* SearchViewController.swift in Sources */,
 				FE3EC71F284F558F0075F81C /* MainViewController.swift in Sources */,
+				CEF42AA6285A3FCC0022DDEE /* SearchCollectionViewCell.swift in Sources */,
 				FEB8B19F2859C35D0010C6ED /* MyCollectionViewCell.swift in Sources */,
 				FEB8B1A8285A04700010C6ED /* InstragramPost.swift in Sources */,
 				FE3EC725284F558F0075F81C /* InstragramClone.xcdatamodeld in Sources */,

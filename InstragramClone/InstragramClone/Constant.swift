@@ -14,4 +14,8 @@ struct K {
         static let cellId = "collectionCell"
         static let cellNibName = "MyCollectionViewCell"
     }
+    struct Search {
+        static let searchCellID = "searchFeedCell"
+        static let searchNibName = "SearchCollectionViewCell"
+    }
 }
