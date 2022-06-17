@@ -23,6 +23,13 @@ class MainViewController: UIViewController, UICollectionViewDelegate {
     @IBOutlet weak var maintableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        let logoImageView = UIImageView(frame : CGRect(x: 200, y: 0,width: 30, height: 30))
+        logoImageView.contentMode = .scaleAspectFit
+        let logoImage = UIImage(named: "Logo2")
+        logoImageView.image = logoImage
+        navigationItem.titleView = logoImageView
+//        navigationItem.title.locat
         
         maintableView.dataSource = self
         maintableView.delegate = self
@@ -30,6 +37,7 @@ class MainViewController: UIViewController, UICollectionViewDelegate {
         maintableView.register(UINib(nibName: K.storyNibName, bundle: nil), forCellReuseIdentifier: K.stroyCellID)
         // Do any additional setup after loading the view.
         maintableView.register(UINib(nibName: K.feedNibName, bundle: nil), forCellReuseIdentifier: K.feedCellID)
+//        navigationController?.isNavigationBarHidden = true
     }
     
     @IBAction func homeButtonPressed(_ sender: UIButton) {

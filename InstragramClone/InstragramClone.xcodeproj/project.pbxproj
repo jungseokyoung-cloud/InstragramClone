@@ -10,6 +10,15 @@
 		CEF42A9D285A3B040022DDEE /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF42A9C285A3B040022DDEE /* SearchViewController.swift */; };
 		CEF42AA5285A3FCC0022DDEE /* SearchCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEF42AA3285A3FCC0022DDEE /* SearchCollectionViewCell.xib */; };
 		CEF42AA6285A3FCC0022DDEE /* SearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF42AA4285A3FCC0022DDEE /* SearchCollectionViewCell.swift */; };
+		CEF42ADE285CB7E90022DDEE /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF42ADD285CB7E90022DDEE /* ResultViewController.swift */; };
+		CEF42AE1285CDF890022DDEE /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF42AE0285CDF890022DDEE /* ProfileViewController.swift */; };
+		CEF42AE3285CDFA00022DDEE /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF42AE2285CDFA00022DDEE /* NotificationViewController.swift */; };
+		CEF42AE6285CDFF60022DDEE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF42AE5285CDFF60022DDEE /* LoginViewController.swift */; };
+		CEF42AE8285CDFFC0022DDEE /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF42AE7285CDFFC0022DDEE /* RegisterViewController.swift */; };
+		CEF42AEA285CE0230022DDEE /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF42AE9285CE0230022DDEE /* PostViewController.swift */; };
+		CEF42AEE285CE0600022DDEE /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF42AED285CE0600022DDEE /* SettingViewController.swift */; };
+		CEF42AF0285CE0660022DDEE /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF42AEF285CE0660022DDEE /* EditProfileViewController.swift */; };
+		CEF42AF2285CE0790022DDEE /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF42AF1285CE0790022DDEE /* ListViewController.swift */; };
 		FE3EC71B284F558F0075F81C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3EC71A284F558F0075F81C /* AppDelegate.swift */; };
 		FE3EC71D284F558F0075F81C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3EC71C284F558F0075F81C /* SceneDelegate.swift */; };
 		FE3EC71F284F558F0075F81C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3EC71E284F558F0075F81C /* MainViewController.swift */; };
@@ -31,6 +40,15 @@
 		CEF42A9C285A3B040022DDEE /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		CEF42AA3285A3FCC0022DDEE /* SearchCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchCollectionViewCell.xib; sourceTree = "<group>"; };
 		CEF42AA4285A3FCC0022DDEE /* SearchCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewCell.swift; sourceTree = "<group>"; };
+		CEF42ADD285CB7E90022DDEE /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		CEF42AE0285CDF890022DDEE /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		CEF42AE2285CDFA00022DDEE /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		CEF42AE5285CDFF60022DDEE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		CEF42AE7285CDFFC0022DDEE /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		CEF42AE9285CE0230022DDEE /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		CEF42AED285CE0600022DDEE /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		CEF42AEF285CE0660022DDEE /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		CEF42AF1285CE0790022DDEE /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		FE3EC717284F558F0075F81C /* InstragramClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstragramClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE3EC71A284F558F0075F81C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE3EC71C284F558F0075F81C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +88,47 @@
 			path = Search;
 			sourceTree = "<group>";
 		};
+		CEF42ADF285CDF180022DDEE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FE3EC71A284F558F0075F81C /* AppDelegate.swift */,
+				FE3EC71C284F558F0075F81C /* SceneDelegate.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CEF42AE4285CDFE60022DDEE /* LoginController */ = {
+			isa = PBXGroup;
+			children = (
+				CEF42AE5285CDFF60022DDEE /* LoginViewController.swift */,
+				CEF42AE7285CDFFC0022DDEE /* RegisterViewController.swift */,
+			);
+			path = LoginController;
+			sourceTree = "<group>";
+		};
+		CEF42AEB285CE04A0022DDEE /* CoreController */ = {
+			isa = PBXGroup;
+			children = (
+				FE3EC71E284F558F0075F81C /* MainViewController.swift */,
+				CEF42A9C285A3B040022DDEE /* SearchViewController.swift */,
+				CEF42AE0285CDF890022DDEE /* ProfileViewController.swift */,
+				CEF42AE2285CDFA00022DDEE /* NotificationViewController.swift */,
+			);
+			path = CoreController;
+			sourceTree = "<group>";
+		};
+		CEF42AEC285CE0570022DDEE /* ETC */ = {
+			isa = PBXGroup;
+			children = (
+				CEF42ADD285CB7E90022DDEE /* ResultViewController.swift */,
+				CEF42AE9285CE0230022DDEE /* PostViewController.swift */,
+				CEF42AED285CE0600022DDEE /* SettingViewController.swift */,
+				CEF42AEF285CE0660022DDEE /* EditProfileViewController.swift */,
+				CEF42AF1285CE0790022DDEE /* ListViewController.swift */,
+			);
+			path = ETC;
+			sourceTree = "<group>";
+		};
 		FE3EC70E284F558F0075F81C = {
 			isa = PBXGroup;
 			children = (
@@ -89,13 +148,11 @@
 		FE3EC719284F558F0075F81C /* InstragramClone */ = {
 			isa = PBXGroup;
 			children = (
-				FE3EC71A284F558F0075F81C /* AppDelegate.swift */,
-				FE3EC71C284F558F0075F81C /* SceneDelegate.swift */,
+				CEF42ADF285CDF180022DDEE /* Resources */,
 				FEB8B1872859B5B50010C6ED /* Constant.swift */,
 				FEB8B1A9285A04770010C6ED /* Model */,
 				FE3EC731284F55FD0075F81C /* Controller */,
 				FE3EC732284F56270075F81C /* View */,
-				FE3EC728284F55910075F81C /* LaunchScreen.storyboard */,
 				FE3EC72B284F55910075F81C /* Info.plist */,
 				FE3EC723284F558F0075F81C /* InstragramClone.xcdatamodeld */,
 				FEF95C4B285A334800D60766 /* Assets.xcassets */,
@@ -106,8 +163,9 @@
 		FE3EC731284F55FD0075F81C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				FE3EC71E284F558F0075F81C /* MainViewController.swift */,
-				CEF42A9C285A3B040022DDEE /* SearchViewController.swift */,
+				CEF42AE4285CDFE60022DDEE /* LoginController */,
+				CEF42AEB285CE04A0022DDEE /* CoreController */,
+				CEF42AEC285CE0570022DDEE /* ETC */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -115,6 +173,7 @@
 		FE3EC732284F56270075F81C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FE3EC728284F55910075F81C /* LaunchScreen.storyboard */,
 				FE3EC720284F558F0075F81C /* Main.storyboard */,
 				FEB8B1A52859D3390010C6ED /* Story */,
 				FEB8B1A62859D6800010C6ED /* Feed */,
@@ -229,14 +288,23 @@
 				CEF42A9D285A3B040022DDEE /* SearchViewController.swift in Sources */,
 				FE3EC71F284F558F0075F81C /* MainViewController.swift in Sources */,
 				CEF42AA6285A3FCC0022DDEE /* SearchCollectionViewCell.swift in Sources */,
+				CEF42AEA285CE0230022DDEE /* PostViewController.swift in Sources */,
+				CEF42AE6285CDFF60022DDEE /* LoginViewController.swift in Sources */,
+				CEF42AEE285CE0600022DDEE /* SettingViewController.swift in Sources */,
 				FEB8B19F2859C35D0010C6ED /* MyCollectionViewCell.swift in Sources */,
+				CEF42AF0285CE0660022DDEE /* EditProfileViewController.swift in Sources */,
 				FEB8B1A8285A04700010C6ED /* InstragramPost.swift in Sources */,
 				FE3EC725284F558F0075F81C /* InstragramClone.xcdatamodeld in Sources */,
 				FEB8B1882859B5B50010C6ED /* Constant.swift in Sources */,
 				FEB8B1992859C2E30010C6ED /* StoryCell.swift in Sources */,
 				FEB8B1A32859C7770010C6ED /* FeedCell.swift in Sources */,
 				FE3EC71B284F558F0075F81C /* AppDelegate.swift in Sources */,
+				CEF42AE8285CDFFC0022DDEE /* RegisterViewController.swift in Sources */,
+				CEF42AE3285CDFA00022DDEE /* NotificationViewController.swift in Sources */,
+				CEF42AE1285CDF890022DDEE /* ProfileViewController.swift in Sources */,
 				FE3EC71D284F558F0075F81C /* SceneDelegate.swift in Sources */,
+				CEF42AF2285CE0790022DDEE /* ListViewController.swift in Sources */,
+				CEF42ADE285CB7E90022DDEE /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

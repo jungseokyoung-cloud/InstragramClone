@@ -12,16 +12,17 @@ class SearchViewController: UIViewController {
     let feeds = ["Logo", "Logo2", "Logo","Logo2", "Logo", "Logo2","Logo", "Logo2", "Logo",
                  "Logo2", "Logo", "Logo2", "Logo", "Logo2", "Logo", "Logo2", "Logo", "Logo2"]
     
-    @IBOutlet weak var textField: UITextField!
-    @IBOutlet weak var cancleButton: UIButton!
+    let searchController = UISearchController(searchResultsController: ResultViewController())
+    
     @IBOutlet weak var feedCollectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        textField.delegate = self
         feedCollectionView.delegate = self
         feedCollectionView.dataSource = self
         feedCollectionView.register(UINib(nibName: K.Search.searchNibName, bundle: nil), forCellWithReuseIdentifier: K.Search.searchCellID)
-        cancleButton.isHidden = true
+        
+        searchController.searchResultsUpdater = self
+        navigationItem.searchController = searchController
 
     }
     
@@ -63,7 +64,18 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
     }
 }
 
-//MARK: UITextFiledDelegate
-extension SearchViewController: UITextFieldDelegate{
+//MARK: UISearchResultsUpdation
+extension SearchViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) { // 매순간 호출 !
+        guard let text = searchController.searchBar.text else {
+            return
+        }
+//        print(text)
+    }
+    
+    
+}
+
+extension SearchViewController: UISearchBarDelegate {
     
 }
