@@ -24,11 +24,13 @@ class MainViewController: UIViewController, UICollectionViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let logoImageView = UIImageView(frame : CGRect(x: 200, y: 0,width: 30, height: 30))
+        let logoImageView = UIImageView(frame: CGRect(x: 0, y: 0,width: 30, height: 30))
         logoImageView.contentMode = .scaleAspectFit
         let logoImage = UIImage(named: "Logo2")
         logoImageView.image = logoImage
         navigationItem.titleView = logoImageView
+        navigationItem.titleView?.bounds = CGRect(x: 0, y: 0, width: 30, height: 30)
+
 //        navigationItem.title.locat
         
         maintableView.dataSource = self

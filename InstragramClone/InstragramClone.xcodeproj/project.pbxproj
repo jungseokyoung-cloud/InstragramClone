@@ -25,6 +25,7 @@
 		FE3EC722284F558F0075F81C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE3EC720284F558F0075F81C /* Main.storyboard */; };
 		FE3EC725284F558F0075F81C /* InstragramClone.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FE3EC723284F558F0075F81C /* InstragramClone.xcdatamodeld */; };
 		FE3EC72A284F55910075F81C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE3EC728284F55910075F81C /* LaunchScreen.storyboard */; };
+		FE9068662860A74100697B37 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9068652860A74100697B37 /* Extensions.swift */; };
 		FEB8B1882859B5B50010C6ED /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB8B1872859B5B50010C6ED /* Constant.swift */; };
 		FEB8B1992859C2E30010C6ED /* StoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB8B1972859C2E30010C6ED /* StoryCell.swift */; };
 		FEB8B19A2859C2E30010C6ED /* StoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEB8B1982859C2E30010C6ED /* StoryCell.xib */; };
@@ -33,6 +34,7 @@
 		FEB8B1A32859C7770010C6ED /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB8B1A12859C7770010C6ED /* FeedCell.swift */; };
 		FEB8B1A42859C7770010C6ED /* FeedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEB8B1A22859C7770010C6ED /* FeedCell.xib */; };
 		FEB8B1A8285A04700010C6ED /* InstragramPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB8B1A7285A046F0010C6ED /* InstragramPost.swift */; };
+		FEF03117285F272C00F6259B /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF03116285F272C00F6259B /* FirstViewController.swift */; };
 		FEF95C4C285A334900D60766 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEF95C4B285A334800D60766 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +59,7 @@
 		FE3EC724284F558F0075F81C /* InstragramClone.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = InstragramClone.xcdatamodel; sourceTree = "<group>"; };
 		FE3EC729284F55910075F81C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE3EC72B284F55910075F81C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE9068652860A74100697B37 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		FEB8B1872859B5B50010C6ED /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		FEB8B1972859C2E30010C6ED /* StoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCell.swift; sourceTree = "<group>"; };
 		FEB8B1982859C2E30010C6ED /* StoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoryCell.xib; sourceTree = "<group>"; };
@@ -65,6 +68,7 @@
 		FEB8B1A12859C7770010C6ED /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		FEB8B1A22859C7770010C6ED /* FeedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedCell.xib; sourceTree = "<group>"; };
 		FEB8B1A7285A046F0010C6ED /* InstragramPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstragramPost.swift; sourceTree = "<group>"; };
+		FEF03116285F272C00F6259B /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		FEF95C4B285A334800D60766 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,6 +97,7 @@
 			children = (
 				FE3EC71A284F558F0075F81C /* AppDelegate.swift */,
 				FE3EC71C284F558F0075F81C /* SceneDelegate.swift */,
+				FE9068652860A74100697B37 /* Extensions.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -102,6 +107,7 @@
 			children = (
 				CEF42AE5285CDFF60022DDEE /* LoginViewController.swift */,
 				CEF42AE7285CDFFC0022DDEE /* RegisterViewController.swift */,
+				FEF03116285F272C00F6259B /* FirstViewController.swift */,
 			);
 			path = LoginController;
 			sourceTree = "<group>";
@@ -153,6 +159,7 @@
 				FEB8B1A9285A04770010C6ED /* Model */,
 				FE3EC731284F55FD0075F81C /* Controller */,
 				FE3EC732284F56270075F81C /* View */,
+				FE3EC728284F55910075F81C /* LaunchScreen.storyboard */,
 				FE3EC72B284F55910075F81C /* Info.plist */,
 				FE3EC723284F558F0075F81C /* InstragramClone.xcdatamodeld */,
 				FEF95C4B285A334800D60766 /* Assets.xcassets */,
@@ -173,7 +180,6 @@
 		FE3EC732284F56270075F81C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				FE3EC728284F55910075F81C /* LaunchScreen.storyboard */,
 				FE3EC720284F558F0075F81C /* Main.storyboard */,
 				FEB8B1A52859D3390010C6ED /* Story */,
 				FEB8B1A62859D6800010C6ED /* Feed */,
@@ -291,8 +297,10 @@
 				CEF42AEA285CE0230022DDEE /* PostViewController.swift in Sources */,
 				CEF42AE6285CDFF60022DDEE /* LoginViewController.swift in Sources */,
 				CEF42AEE285CE0600022DDEE /* SettingViewController.swift in Sources */,
+				FEF03117285F272C00F6259B /* FirstViewController.swift in Sources */,
 				FEB8B19F2859C35D0010C6ED /* MyCollectionViewCell.swift in Sources */,
 				CEF42AF0285CE0660022DDEE /* EditProfileViewController.swift in Sources */,
+				FE9068662860A74100697B37 /* Extensions.swift in Sources */,
 				FEB8B1A8285A04700010C6ED /* InstragramPost.swift in Sources */,
 				FE3EC725284F558F0075F81C /* InstragramClone.xcdatamodeld in Sources */,
 				FEB8B1882859B5B50010C6ED /* Constant.swift in Sources */,

@@ -18,4 +18,10 @@ struct K {
         static let searchCellID = "searchFeedCell"
         static let searchNibName = "SearchCollectionViewCell"
     }
+    struct Segue {
+        static let firstToLogin = "firstToLogin"
+        static let firstToRegister = "firstToRegister"
+        static let loginToRegister = "LoginToRegister"
+        static let registerToLogin = "RegisterToLogin"
+    }
 }
