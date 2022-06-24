@@ -24,4 +24,9 @@ struct K {
         static let loginToRegister = "LoginToRegister"
         static let registerToLogin = "RegisterToLogin"
     }
+    
+    struct NotificationVC {
+        static let flowNotifyCell = "flowNotifyCell"
+        static let notifyCell = "notifyCell"
+    }
 }

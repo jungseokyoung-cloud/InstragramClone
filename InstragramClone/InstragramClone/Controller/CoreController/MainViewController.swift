@@ -15,7 +15,7 @@ class MainViewController: UIViewController, UICollectionViewDelegate {
         InstagramPost(numOfLikes: 200000, userName: "정석영2", userProfileImage: "Logo", mainPostImage: "Logo2", userLocation: "노원구"),
         InstagramPost(numOfLikes: 1, userName: "정석영3", userProfileImage: "Logo", mainPostImage: "Logo2", userLocation: "서울"),
         InstagramPost(numOfLikes: 123, userName: "정석영4545", userProfileImage: "Logo", mainPostImage: "Logo2", userLocation: "New York")
-
+        
     ]
     
     
@@ -23,15 +23,21 @@ class MainViewController: UIViewController, UICollectionViewDelegate {
     @IBOutlet weak var maintableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let logoImageView = UIImageView(frame: CGRect(x: 0, y: 0,width: 30, height: 30))
+        
+        let logoImageView = UIImageView()
+        logoImageView.frame = CGRect(x: 0, y :0, width: 100, height: 30)
+        logoImageView.image = UIImage(named: "logo_")
+        
+        logoImageView.backgroundColor = .blue
         logoImageView.contentMode = .scaleAspectFit
-        let logoImage = UIImage(named: "Logo2")
-        logoImageView.image = logoImage
-        navigationItem.titleView = logoImageView
-        navigationItem.titleView?.bounds = CGRect(x: 0, y: 0, width: 30, height: 30)
-
-//        navigationItem.title.locat
+        
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: logoImageView)
+        
+        
+        //        navigationItem.titleView?.bounds = CGRect(x: 0, y: 0, width: 30, height: 30)
+        
+        //        navigationItem.title.locat
+        tabBarController?.delegate = self
         
         maintableView.dataSource = self
         maintableView.delegate = self
@@ -39,13 +45,7 @@ class MainViewController: UIViewController, UICollectionViewDelegate {
         maintableView.register(UINib(nibName: K.storyNibName, bundle: nil), forCellReuseIdentifier: K.stroyCellID)
         // Do any additional setup after loading the view.
         maintableView.register(UINib(nibName: K.feedNibName, bundle: nil), forCellReuseIdentifier: K.feedCellID)
-//        navigationController?.isNavigationBarHidden = true
-    }
-    
-    @IBAction func homeButtonPressed(_ sender: UIButton) {
-        maintableView.reloadData()
-        let indexPath = IndexPath(row: 0, section: 0)
-        maintableView.scrollToRow(at: indexPath, at: .top, animated: true)
+        //        navigationController?.isNavigationBarHidden = true
     }
     
 }
@@ -66,19 +66,19 @@ extension MainViewController : UITableViewDataSource, UITableViewDelegate {
         }
     }
     
-//     height 지정 가능
-        func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-            switch indexPath.section {
-            case 0:
-                return 60
-            case 1:
-                return 696
-            default:
-                return 0
-            }
+    //     height 지정 가능
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        switch indexPath.section {
+        case 0:
+            return 60
+        case 1:
+            return 696
+        default:
+            return 0
         }
+    }
     
-
+    
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -90,16 +90,27 @@ extension MainViewController : UITableViewDataSource, UITableViewDelegate {
         case 1:
             let cell = maintableView.dequeueReusableCell(withIdentifier: K.feedCellID, for: indexPath) as! FeedCell
             cell.configure(with: feeds[indexPath.row])
-            print("-----------------------------")
-            print("cell height : \(cell.bounds.height)")
-            cell.printCell()
-            
             return cell
         default:
             return UITableViewCell()
             
         }
     }
-    
 }
+
+
+extension MainViewController : UITabBarDelegate, UITabBarControllerDelegate {
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) { // 현재 누를때만 viewContoller되도록
+        
+        guard viewController is UINavigationController else {
+            return
+        }
+        if (viewController as! UINavigationController).viewControllers.first is MainViewController{
+            maintableView.reloadData()
+            let indexPath = IndexPath(row: 0, section: 0)
+            maintableView.scrollToRow(at: indexPath, at: .top, animated: true)
+        }
+    }
+}
+
 
