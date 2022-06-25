@@ -100,16 +100,17 @@ extension MainViewController : UITableViewDataSource, UITableViewDelegate {
 
 
 extension MainViewController : UITabBarDelegate, UITabBarControllerDelegate {
-    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) { // 현재 누를때만 viewContoller되도록
-        
-        guard viewController is UINavigationController else {
-            return
+    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+        guard let navigationVC1 = tabBarController.selectedViewController as? UINavigationController, let navigationVC2 = viewController as? UINavigationController else {
+            return true
         }
-        if (viewController as! UINavigationController).viewControllers.first is MainViewController{
+        if navigationVC1.viewControllers.first is MainViewController && navigationVC1 == navigationVC2 {
             maintableView.reloadData()
             let indexPath = IndexPath(row: 0, section: 0)
             maintableView.scrollToRow(at: indexPath, at: .top, animated: true)
         }
+        
+        return true
     }
 }
 
