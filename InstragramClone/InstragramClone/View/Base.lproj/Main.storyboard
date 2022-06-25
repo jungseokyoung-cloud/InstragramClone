@@ -528,14 +528,92 @@
                     <view key="view" contentMode="scaleToFill" id="wz3-O6-26W">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="vDN-JH-yQh" userLabel="Infor Stack View">
+                                <rect key="frame" x="5" y="93" width="404" height="80"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="dHR-Ry-QUe">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="80" id="784-Ob-0uq"/>
+                                            <constraint firstAttribute="width" constant="80" id="gAG-ab-Ebm"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="qTf-bg-agW">
+                                        <rect key="frame" x="95" y="0.0" width="309" height="80"/>
+                                        <subviews>
+                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="26k-64-6ro">
+                                                <rect key="frame" x="0.0" y="0.0" width="99.5" height="80"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qWb-W0-A2J">
+                                                <rect key="frame" x="104.5" y="0.0" width="100" height="80"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OiL-i8-Knk">
+                                                <rect key="frame" x="209.5" y="0.0" width="99.5" height="80"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="Ome-qS-fQh"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="YzM-QR-1Vj"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Eb-HW-3BL">
+                                <rect key="frame" x="27.5" y="176" width="35.5" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GAm-6q-DqX">
+                                <rect key="frame" x="15" y="213" width="384" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="2Mb-Rr-ztf"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="프로필 편집"/>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="EN0-Xn-cY6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4Eb-HW-3BL" firstAttribute="top" secondItem="vDN-JH-yQh" secondAttribute="bottom" constant="3" id="1EA-5q-RgM"/>
+                            <constraint firstItem="4Eb-HW-3BL" firstAttribute="centerX" secondItem="dHR-Ry-QUe" secondAttribute="centerX" id="5GV-bF-ZHc"/>
+                            <constraint firstItem="GAm-6q-DqX" firstAttribute="top" secondItem="4Eb-HW-3BL" secondAttribute="bottom" constant="20" id="6wm-DF-5vs"/>
+                            <constraint firstItem="EN0-Xn-cY6" firstAttribute="trailing" secondItem="vDN-JH-yQh" secondAttribute="trailing" constant="5" id="Sqj-T3-xk7"/>
+                            <constraint firstItem="EN0-Xn-cY6" firstAttribute="trailing" secondItem="GAm-6q-DqX" secondAttribute="trailing" constant="15" id="aOc-vc-wKG"/>
+                            <constraint firstItem="GAm-6q-DqX" firstAttribute="leading" secondItem="EN0-Xn-cY6" secondAttribute="leading" constant="15" id="c0U-Qc-Umi"/>
+                            <constraint firstItem="vDN-JH-yQh" firstAttribute="leading" secondItem="EN0-Xn-cY6" secondAttribute="leading" constant="5" id="ct2-fI-pje"/>
+                            <constraint firstItem="vDN-JH-yQh" firstAttribute="top" secondItem="EN0-Xn-cY6" secondAttribute="top" constant="5" id="hyN-Xj-ZnC"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="hPn-ud-GnC"/>
+                    <navigationItem key="navigationItem" id="hPn-ud-GnC">
+                        <rightBarButtonItems>
+                            <barButtonItem title="Item" image="list.dash" catalog="system" id="unf-rk-jUL"/>
+                            <barButtonItem title="Item" image="plus.app" catalog="system" id="psX-TT-ghe"/>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="editProfileButton" destination="GAm-6q-DqX" id="HE9-nK-x0Q"/>
+                        <outlet property="followingCountLabel" destination="OiL-i8-Knk" id="m94-2Z-cAX"/>
+                        <outlet property="follwerCountLabel" destination="qWb-W0-A2J" id="Ogb-Gk-0lb"/>
+                        <outlet property="postCountLabel" destination="26k-64-6ro" id="zsa-rC-cDt"/>
+                        <outlet property="profileImageView" destination="dHR-Ry-QUe" id="29P-rY-1cc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fF2-a8-gvD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="12" y="1069"/>
+            <point key="canvasLocation" x="11.594202898550726" y="1068.75"/>
         </scene>
         <!--Item-->
         <scene sceneID="1R8-Xh-Vcj">
@@ -609,9 +687,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Logo" width="1920" height="1905"/>
         <image name="Logo2" width="1280" height="640"/>
         <image name="heart" catalog="system" width="128" height="109"/>
         <image name="homekit" catalog="system" width="128" height="106"/>
+        <image name="list.dash" catalog="system" width="128" height="85"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="plus.app" catalog="system" width="128" height="114"/>
