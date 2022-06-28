@@ -13,6 +13,9 @@ class ProfileViewController: UIViewController {
     let postCount = 1
     let followerCnt = 100
     let follwingCnt = 150
+    let feeds = ["Logo", "Logo2", "Logo"]
+    let tagFeeds = ["Logo2", "Logo", "Logo2","Logo", "Logo2", "Logo",
+                    "Logo2", "Logo", "Logo2", "Logo", "Logo2", "Logo", "Logo2", "Logo", "Logo2"]
     
     @IBOutlet weak var myView: UIView!
     @IBOutlet weak var feedCollectionView: UICollectionView!
@@ -44,15 +47,31 @@ class ProfileViewController: UIViewController {
         
         
         storyTableVIew.register(UINib(nibName: K.storyNibName, bundle: nil), forCellReuseIdentifier: K.stroyCellID)
+        storyTableVIew.isHidden = true
         storyTableVIew.delegate = self
         storyTableVIew.dataSource = self
-        storyTableVIew.isHidden = true
         
         
-        
-        // Do any additional setup after loading the view.
+        feedCollectionView.register(UINib(nibName: K.Search.searchNibName, bundle: nil), forCellWithReuseIdentifier: K.Search.searchCellID)
+        feedCollectionView.delegate = self
+        feedCollectionView.dataSource = self
     }
     
+    @IBAction func feedButtonPressed(_ sender: UIButton) {
+        buttonDirection = 0
+        feedButton.isSelected = true
+        tagFeedButton.isSelected = false
+        feedCollectionView.reloadData()
+    }
+    
+    
+    @IBAction func tagFeedButtonPressed(_ sender: UIButton) {
+        buttonDirection = 1
+        feedButton.isSelected = false
+        tagFeedButton.isSelected = true
+        feedCollectionView.reloadData()
+
+    }
     func setLabels() {
         postCountLabel.text = "\(postCount)\n게시"
         follwerCountLabel.text = "\(followerCnt)\n팔로워"
@@ -90,6 +109,43 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource{
     
 }
 
+//MARK: UICollectionViewDelegate, UICollectionViewDataSorce
+extension ProfileViewController : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if buttonDirection == 0 {
+            return feeds.count
+        } else {
+            return tagFeeds.count
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = feedCollectionView.dequeueReusableCell(withReuseIdentifier: K.Search.searchCellID, for: indexPath) as! SearchCollectionViewCell
+        
+        if buttonDirection == 0 {
+            
+            cell.configure(with: feeds[indexPath.row])
+            
+        } else {
+            cell.configure(with: tagFeeds[indexPath.row])
+        }
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let cellSize =  self.myView.width / 3
+        print(cellSize)
+        print(myView.width)
+        return CGSize(width: cellSize, height: cellSize)
+    }
+}
+
 //MARK: - addJecture
 extension ProfileViewController : UIGestureRecognizerDelegate{
     func registerGesture() {
@@ -102,7 +158,7 @@ extension ProfileViewController : UIGestureRecognizerDelegate{
             self.myView.addGestureRecognizer(gesture)
         }
     }
-
+    
     @objc func handleSwipe(_ gesture: UISwipeGestureRecognizer) {
         switch gesture.direction {
         case UISwipeGestureRecognizer.Direction.left :
@@ -117,11 +173,9 @@ extension ProfileViewController : UIGestureRecognizerDelegate{
             break
         }
         if buttonDirection == 0 {
-            feedButton.isSelected = true
-            tagFeedButton.isSelected = false
+            feedButtonPressed(feedButton)
         } else {
-            feedButton.isSelected = false
-            tagFeedButton.isSelected = true
+            tagFeedButtonPressed(tagFeedButton)
         }
     }
     

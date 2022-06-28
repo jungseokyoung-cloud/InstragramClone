@@ -617,7 +617,7 @@
                                             <constraint firstAttribute="height" constant="80" id="dRf-zw-ai9"/>
                                         </constraints>
                                     </tableView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="fWN-CA-ouW">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="fWN-CA-ouW" userLabel="Button View Area">
                                         <rect key="frame" x="0.0" y="107" width="394" height="45"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r12-so-0iT">
@@ -625,12 +625,18 @@
                                                 <color key="tintColor" systemColor="labelColor"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="rectangle.grid.3x2" catalog="system"/>
+                                                <connections>
+                                                    <action selector="feedButtonPressed:" destination="QzK-qW-EQt" eventType="touchUpInside" id="gnn-UN-ShJ"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3jg-1d-73Y">
                                                 <rect key="frame" x="197" y="0.0" width="197" height="45"/>
                                                 <color key="tintColor" systemColor="labelColor"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="person.crop.circle" catalog="system"/>
+                                                <connections>
+                                                    <action selector="tagFeedButtonPressed:" destination="QzK-qW-EQt" eventType="touchUpInside" id="jg7-Lc-uUX"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -640,9 +646,8 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N3L-TN-gKv">
                                         <rect key="frame" x="0.0" y="157" width="394" height="415"/>
                                         <subviews>
-                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="SVm-Ia-vvh">
-                                                <rect key="frame" x="20" y="20" width="354" height="384"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="SVm-Ia-vvh">
+                                                <rect key="frame" x="0.0" y="0.0" width="394" height="415"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bsp-Yc-8ih">
                                                     <size key="itemSize" width="128" height="128"/>
@@ -663,6 +668,12 @@
                                             </collectionView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="SVm-Ia-vvh" firstAttribute="top" secondItem="N3L-TN-gKv" secondAttribute="top" id="D3g-Vq-Pkz"/>
+                                            <constraint firstAttribute="bottom" secondItem="SVm-Ia-vvh" secondAttribute="bottom" id="Xxe-NX-NOg"/>
+                                            <constraint firstItem="SVm-Ia-vvh" firstAttribute="leading" secondItem="N3L-TN-gKv" secondAttribute="leading" id="kiu-wL-Qfb"/>
+                                            <constraint firstAttribute="trailing" secondItem="SVm-Ia-vvh" secondAttribute="trailing" id="m8i-WQ-ajE"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
