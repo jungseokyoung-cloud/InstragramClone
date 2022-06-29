@@ -15,6 +15,7 @@ class RegisterViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setBackButton()
         userNameTextField.delegate = self
         passwordTextField.delegate = self
         // Do any additional setup after loading the view.
@@ -25,6 +26,12 @@ class RegisterViewController: UIViewController{
         if let userName = userNameTextField.text, let password = passwordTextField.text {
             print("\(userName), \(password)")
         }
+        if let mainVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: K.StoryBoard.mainVC) as? UITabBarController {
+            mainVC.selectedIndex = 0
+            mainVC.modalPresentationStyle = .fullScreen
+            self.present(mainVC, animated: true)
+        }
+        
     }
 
 }

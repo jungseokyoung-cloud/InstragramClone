@@ -28,3 +28,12 @@ extension UIView {
     }
 
 }
+
+extension UIViewController {
+    func setBackButton() {
+        let backButton = UIBarButtonItem()
+        backButton.title = ""
+        backButton.tintColor = .label
+        self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
+    }
+}

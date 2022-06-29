@@ -91,6 +91,13 @@ class ProfileViewController: UIViewController {
             detaileButton.setImage(UIImage(systemName: "arrow.down"), for: .normal)
         }
     }
+    
+    @IBAction func settingButtonPressed(_ sender: UIBarButtonItem) {
+        let settingVC = SettingViewController()
+        settingVC.modalPresentationStyle = .fullScreen
+        self.navigationController?.pushViewController(settingVC, animated: true)
+    }
+    
 }
 
 //MARK: - UITableViewDataSource / UITableViewDelegate
@@ -140,8 +147,6 @@ extension ProfileViewController : UICollectionViewDelegate, UICollectionViewData
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let cellSize =  self.myView.width / 3
-        print(cellSize)
-        print(myView.width)
         return CGSize(width: cellSize, height: cellSize)
     }
 }

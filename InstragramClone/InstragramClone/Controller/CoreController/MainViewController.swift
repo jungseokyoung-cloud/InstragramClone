@@ -22,16 +22,15 @@ class MainViewController: UIViewController, UICollectionViewDelegate {
     
     @IBOutlet weak var maintableView: UITableView!
     override func viewDidLoad() {
-        super.viewDidLoad()
-        
         let logoImageView = UIImageView()
-        logoImageView.frame = CGRect(x: 0, y :0, width: 100, height: 30)
+        logoImageView.frame = CGRect(x: 0, y :0, width: 90, height: 50)
         logoImageView.image = UIImage(named: "logo_")
+        let lable = UILabel(frame: CGRect(x: 0, y: 0, width: 90 , height: 50))
+        lable.addSubview(logoImageView)
         
-        logoImageView.backgroundColor = .blue
         logoImageView.contentMode = .scaleAspectFit
         
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: logoImageView)
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: lable)
         
         
         //        navigationItem.titleView?.bounds = CGRect(x: 0, y: 0, width: 30, height: 30)
@@ -113,5 +112,6 @@ extension MainViewController : UITabBarDelegate, UITabBarControllerDelegate {
         return true
     }
 }
+
 
 

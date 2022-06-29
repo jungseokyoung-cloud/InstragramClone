@@ -16,12 +16,17 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         userNameTextField.delegate = self
         passwordTextField.delegate = self
+        setBackButton()
         // Do any additional setup after loading the view.
     }
     
 
     @IBAction func LoginButtonPressed(_ sender: UIButton) {
-        print("loginButton Pressed")
+        if let mainVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: K.StoryBoard.mainVC) as? UITabBarController {
+            mainVC.selectedIndex = 0
+            mainVC.modalPresentationStyle = .fullScreen
+            self.present(mainVC, animated: true)
+        }
     }
     @IBAction func DontHaveAcoountPressed(_ sender: UIButton) {
     }

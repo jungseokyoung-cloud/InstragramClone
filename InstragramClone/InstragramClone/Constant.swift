@@ -10,6 +10,13 @@ struct K {
     static let feedNibName = "FeedCell"
     static let feedCellID = "feedCell"
     
+    struct StoryBoard {
+        static let loginNavigation = "LoginNavigationVC"
+        static let loginVC = "LoginVC"
+        static let registerVC = "RegisterVC"
+        static let mainVC = "MainVC"
+    }
+    
     struct storyCell {
         static let cellId = "collectionCell"
         static let cellNibName = "MyCollectionViewCell"
