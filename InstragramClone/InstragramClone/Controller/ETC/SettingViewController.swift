@@ -7,12 +7,6 @@
 
 import UIKit
 
-/// Setting Struct
-struct SettingCellModel {
-    let title : String
-    let handler: (() -> Void)
-}
-
 class SettingViewController: UIViewController {
 
     private var data = [[SettingCellModel]]()

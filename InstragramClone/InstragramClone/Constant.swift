@@ -36,4 +36,8 @@ struct K {
         static let flowNotifyCell = "flowNotifyCell"
         static let notifyCell = "notifyCell"
     }
+    struct PopUpVC {
+        static let cellID = "popUpCell"
+        static let nibName = "MyTableViewCell"
+    }
 }

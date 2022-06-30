@@ -25,6 +25,8 @@
 		FE3EC722284F558F0075F81C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE3EC720284F558F0075F81C /* Main.storyboard */; };
 		FE3EC725284F558F0075F81C /* InstragramClone.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FE3EC723284F558F0075F81C /* InstragramClone.xcdatamodeld */; };
 		FE3EC72A284F55910075F81C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE3EC728284F55910075F81C /* LaunchScreen.storyboard */; };
+		FE7A8832286DB5D800D94FA9 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7A8831286DB5D800D94FA9 /* MessageViewController.swift */; };
+		FE7A8834286DB70600D94FA9 /* ETCModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7A8833286DB70600D94FA9 /* ETCModels.swift */; };
 		FE9068662860A74100697B37 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9068652860A74100697B37 /* Extensions.swift */; };
 		FEB8B1882859B5B50010C6ED /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB8B1872859B5B50010C6ED /* Constant.swift */; };
 		FEB8B1992859C2E30010C6ED /* StoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB8B1972859C2E30010C6ED /* StoryCell.swift */; };
@@ -59,6 +61,8 @@
 		FE3EC724284F558F0075F81C /* InstragramClone.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = InstragramClone.xcdatamodel; sourceTree = "<group>"; };
 		FE3EC729284F55910075F81C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE3EC72B284F55910075F81C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE7A8831286DB5D800D94FA9 /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
+		FE7A8833286DB70600D94FA9 /* ETCModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCModels.swift; sourceTree = "<group>"; };
 		FE9068652860A74100697B37 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		FEB8B1872859B5B50010C6ED /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		FEB8B1972859C2E30010C6ED /* StoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCell.swift; sourceTree = "<group>"; };
@@ -131,6 +135,7 @@
 				CEF42AED285CE0600022DDEE /* SettingViewController.swift */,
 				CEF42AEF285CE0660022DDEE /* EditProfileViewController.swift */,
 				CEF42AF1285CE0790022DDEE /* ListViewController.swift */,
+				FE7A8831286DB5D800D94FA9 /* MessageViewController.swift */,
 			);
 			path = ETC;
 			sourceTree = "<group>";
@@ -212,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				FEB8B1A7285A046F0010C6ED /* InstragramPost.swift */,
+				FE7A8833286DB70600D94FA9 /* ETCModels.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -301,12 +307,14 @@
 				FEB8B19F2859C35D0010C6ED /* MyCollectionViewCell.swift in Sources */,
 				CEF42AF0285CE0660022DDEE /* EditProfileViewController.swift in Sources */,
 				FE9068662860A74100697B37 /* Extensions.swift in Sources */,
+				FE7A8834286DB70600D94FA9 /* ETCModels.swift in Sources */,
 				FEB8B1A8285A04700010C6ED /* InstragramPost.swift in Sources */,
 				FE3EC725284F558F0075F81C /* InstragramClone.xcdatamodeld in Sources */,
 				FEB8B1882859B5B50010C6ED /* Constant.swift in Sources */,
 				FEB8B1992859C2E30010C6ED /* StoryCell.swift in Sources */,
 				FEB8B1A32859C7770010C6ED /* FeedCell.swift in Sources */,
 				FE3EC71B284F558F0075F81C /* AppDelegate.swift in Sources */,
+				FE7A8832286DB5D800D94FA9 /* MessageViewController.swift in Sources */,
 				CEF42AE8285CDFFC0022DDEE /* RegisterViewController.swift in Sources */,
 				CEF42AE3285CDFA00022DDEE /* NotificationViewController.swift in Sources */,
 				CEF42AE1285CDF890022DDEE /* ProfileViewController.swift in Sources */,

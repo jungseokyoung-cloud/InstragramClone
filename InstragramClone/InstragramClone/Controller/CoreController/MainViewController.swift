@@ -18,8 +18,7 @@ class MainViewController: UIViewController, UICollectionViewDelegate {
         
     ]
     
-    
-    
+    @IBOutlet weak var pullDownButton: UIButton!
     @IBOutlet weak var maintableView: UITableView!
     override func viewDidLoad() {
         let logoImageView = UIImageView()
@@ -31,11 +30,8 @@ class MainViewController: UIViewController, UICollectionViewDelegate {
         logoImageView.contentMode = .scaleAspectFit
         
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: lable)
+        setPullDownButton()
         
-        
-        //        navigationItem.titleView?.bounds = CGRect(x: 0, y: 0, width: 30, height: 30)
-        
-        //        navigationItem.title.locat
         tabBarController?.delegate = self
         
         maintableView.dataSource = self
@@ -44,7 +40,25 @@ class MainViewController: UIViewController, UICollectionViewDelegate {
         maintableView.register(UINib(nibName: K.storyNibName, bundle: nil), forCellReuseIdentifier: K.stroyCellID)
         // Do any additional setup after loading the view.
         maintableView.register(UINib(nibName: K.feedNibName, bundle: nil), forCellReuseIdentifier: K.feedCellID)
-        //        navigationController?.isNavigationBarHidden = true
+    }
+    
+    
+    
+    @IBAction func messageButtonPressed(_ sender: Any) {
+    }
+    
+    @IBAction func pullDownButtonPressed(_ sender: UIButton) {
+    }
+//
+//
+    func setPullDownButton(){
+        let feed = UIAction(title: "게시글", image : UIImage(systemName: "rectangle.grid.3x2")) { _ in
+            print("게시글 Pressed") //move to addPostVC
+        }
+        let story = UIAction(title: "스토리", image: UIImage(systemName: "plus.circle")) { _ in
+            print("story pressed")
+        }
+        pullDownButton.menu = UIMenu(title : "", children: [feed, story])
     }
     
 }
@@ -112,6 +126,3 @@ extension MainViewController : UITabBarDelegate, UITabBarControllerDelegate {
         return true
     }
 }
-
-
-
