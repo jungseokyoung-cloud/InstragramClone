@@ -18,7 +18,7 @@
 		CEF42AEA285CE0230022DDEE /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF42AE9285CE0230022DDEE /* PostViewController.swift */; };
 		CEF42AEE285CE0600022DDEE /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF42AED285CE0600022DDEE /* SettingViewController.swift */; };
 		CEF42AF0285CE0660022DDEE /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF42AEF285CE0660022DDEE /* EditProfileViewController.swift */; };
-		CEF42AF2285CE0790022DDEE /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF42AF1285CE0790022DDEE /* ListViewController.swift */; };
+		CEF42AF2285CE0790022DDEE /* MessageListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF42AF1285CE0790022DDEE /* MessageListViewController.swift */; };
 		FE3EC71B284F558F0075F81C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3EC71A284F558F0075F81C /* AppDelegate.swift */; };
 		FE3EC71D284F558F0075F81C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3EC71C284F558F0075F81C /* SceneDelegate.swift */; };
 		FE3EC71F284F558F0075F81C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3EC71E284F558F0075F81C /* MainViewController.swift */; };
@@ -36,6 +36,9 @@
 		FEB8B1A32859C7770010C6ED /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB8B1A12859C7770010C6ED /* FeedCell.swift */; };
 		FEB8B1A42859C7770010C6ED /* FeedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEB8B1A22859C7770010C6ED /* FeedCell.xib */; };
 		FEB8B1A8285A04700010C6ED /* InstragramPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB8B1A7285A046F0010C6ED /* InstragramPost.swift */; };
+		FECD9627287072D500A40160 /* ETC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FECD9626287072D500A40160 /* ETC.storyboard */; };
+		FECD962D287081B100A40160 /* MessaegListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECD962B287081B100A40160 /* MessaegListTableViewCell.swift */; };
+		FECD962E287081B100A40160 /* MessaegListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FECD962C287081B100A40160 /* MessaegListTableViewCell.xib */; };
 		FEF03117285F272C00F6259B /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF03116285F272C00F6259B /* FirstViewController.swift */; };
 		FEF95C4C285A334900D60766 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEF95C4B285A334800D60766 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -52,7 +55,7 @@
 		CEF42AE9285CE0230022DDEE /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		CEF42AED285CE0600022DDEE /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		CEF42AEF285CE0660022DDEE /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
-		CEF42AF1285CE0790022DDEE /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		CEF42AF1285CE0790022DDEE /* MessageListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListViewController.swift; sourceTree = "<group>"; };
 		FE3EC717284F558F0075F81C /* InstragramClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstragramClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE3EC71A284F558F0075F81C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE3EC71C284F558F0075F81C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +75,9 @@
 		FEB8B1A12859C7770010C6ED /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		FEB8B1A22859C7770010C6ED /* FeedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedCell.xib; sourceTree = "<group>"; };
 		FEB8B1A7285A046F0010C6ED /* InstragramPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstragramPost.swift; sourceTree = "<group>"; };
+		FECD9626287072D500A40160 /* ETC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ETC.storyboard; sourceTree = "<group>"; };
+		FECD962B287081B100A40160 /* MessaegListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessaegListTableViewCell.swift; sourceTree = "<group>"; };
+		FECD962C287081B100A40160 /* MessaegListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessaegListTableViewCell.xib; sourceTree = "<group>"; };
 		FEF03116285F272C00F6259B /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		FEF95C4B285A334800D60766 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -134,7 +140,7 @@
 				CEF42AE9285CE0230022DDEE /* PostViewController.swift */,
 				CEF42AED285CE0600022DDEE /* SettingViewController.swift */,
 				CEF42AEF285CE0660022DDEE /* EditProfileViewController.swift */,
-				CEF42AF1285CE0790022DDEE /* ListViewController.swift */,
+				CEF42AF1285CE0790022DDEE /* MessageListViewController.swift */,
 				FE7A8831286DB5D800D94FA9 /* MessageViewController.swift */,
 			);
 			path = ETC;
@@ -186,6 +192,8 @@
 			isa = PBXGroup;
 			children = (
 				FE3EC720284F558F0075F81C /* Main.storyboard */,
+				FECD9626287072D500A40160 /* ETC.storyboard */,
+				FECD962A2870817700A40160 /* Message */,
 				FEB8B1A52859D3390010C6ED /* Story */,
 				FEB8B1A62859D6800010C6ED /* Feed */,
 				CEF42AA2285A3E140022DDEE /* Search */,
@@ -220,6 +228,15 @@
 				FE7A8833286DB70600D94FA9 /* ETCModels.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		FECD962A2870817700A40160 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				FECD962B287081B100A40160 /* MessaegListTableViewCell.swift */,
+				FECD962C287081B100A40160 /* MessaegListTableViewCell.xib */,
+			);
+			path = Message;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,8 +298,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEF42AA5285A3FCC0022DDEE /* SearchCollectionViewCell.xib in Resources */,
+				FECD9627287072D500A40160 /* ETC.storyboard in Resources */,
 				FEB8B1A02859C35D0010C6ED /* MyCollectionViewCell.xib in Resources */,
 				FE3EC72A284F55910075F81C /* LaunchScreen.storyboard in Resources */,
+				FECD962E287081B100A40160 /* MessaegListTableViewCell.xib in Resources */,
 				FEB8B1A42859C7770010C6ED /* FeedCell.xib in Resources */,
 				FEB8B19A2859C2E30010C6ED /* StoryCell.xib in Resources */,
 				FEF95C4C285A334900D60766 /* Assets.xcassets in Resources */,
@@ -316,10 +335,11 @@
 				FE3EC71B284F558F0075F81C /* AppDelegate.swift in Sources */,
 				FE7A8832286DB5D800D94FA9 /* MessageViewController.swift in Sources */,
 				CEF42AE8285CDFFC0022DDEE /* RegisterViewController.swift in Sources */,
+				FECD962D287081B100A40160 /* MessaegListTableViewCell.swift in Sources */,
 				CEF42AE3285CDFA00022DDEE /* NotificationViewController.swift in Sources */,
 				CEF42AE1285CDF890022DDEE /* ProfileViewController.swift in Sources */,
 				FE3EC71D284F558F0075F81C /* SceneDelegate.swift in Sources */,
-				CEF42AF2285CE0790022DDEE /* ListViewController.swift in Sources */,
+				CEF42AF2285CE0790022DDEE /* MessageListViewController.swift in Sources */,
 				CEF42ADE285CB7E90022DDEE /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

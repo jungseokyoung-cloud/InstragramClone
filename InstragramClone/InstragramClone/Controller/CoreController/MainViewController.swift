@@ -45,12 +45,14 @@ class MainViewController: UIViewController, UICollectionViewDelegate {
     
     
     @IBAction func messageButtonPressed(_ sender: Any) {
+        let vc =  MessageListViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func pullDownButtonPressed(_ sender: UIButton) {
     }
-//
-//
+    //
+    //
     func setPullDownButton(){
         let feed = UIAction(title: "게시글", image : UIImage(systemName: "rectangle.grid.3x2")) { _ in
             print("게시글 Pressed") //move to addPostVC

@@ -15,6 +15,8 @@ struct K {
         static let loginVC = "LoginVC"
         static let registerVC = "RegisterVC"
         static let mainVC = "MainVC"
+        static let messageVC = "MessageVC"
+        static let messageTableVC = "MessageTableVC"
     }
     
     struct storyCell {
@@ -39,5 +41,9 @@ struct K {
     struct PopUpVC {
         static let cellID = "popUpCell"
         static let nibName = "MyTableViewCell"
+    }
+    struct Message {
+        static let dmListNib = "MessaegListTableViewCell"
+        static let dmListCellID = "MessageListCell"
     }
 }

@@ -8,22 +8,18 @@
 import UIKit
 
 class MessageViewController: UIViewController {
-
+    var userName = ""
+    var userImage = UIImage()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.view.backgroundColor = .systemBackground
+        
+        setBackButton()
+        let userNameLabel = UILabel()
+        userNameLabel.text = self.userName
+        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: userNameLabel)
+        self.navigationItem.leftItemsSupplementBackButton = true
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

@@ -155,7 +155,7 @@
                                             <color key="baseForegroundColor" systemColor="labelColor"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="alreadyHaveAcoountPressed:" destination="g9a-Ya-rgq" eventType="touchUpInside" id="KOK-5R-qLB"/>
+                                            <action selector="DontHaveAcoountPressed:" destination="g9a-Ya-rgq" eventType="touchUpInside" id="pUC-bA-ELr"/>
                                         </connections>
                                     </button>
                                 </subviews>

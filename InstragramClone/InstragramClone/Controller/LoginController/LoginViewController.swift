@@ -29,6 +29,8 @@ class LoginViewController: UIViewController {
         }
     }
     @IBAction func DontHaveAcoountPressed(_ sender: UIButton) {
+        //pop this VC
+        print("button pressed")
     }
 
 }
