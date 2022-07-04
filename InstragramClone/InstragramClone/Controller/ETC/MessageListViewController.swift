@@ -27,7 +27,8 @@ class MessageListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .systemBackground
-        
+        self.tabBarController?.tabBar.isHidden = true
+
         configureModel()
         setBackButton()
         view.addSubview(messageListTableView)
@@ -55,20 +56,22 @@ class MessageListViewController: UIViewController {
             
         }
     }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = false
+    }
     
 }
 
 extension MessageListViewController : UITableViewDelegate, UITableViewDataSource {
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return data.count
-    }
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return data.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = messageListTableView.dequeueReusableCell(withIdentifier: K.Message.dmListCellID, for: indexPath) as? MessaegListTableViewCell {
-            cell.configure(data[indexPath.section])
+            cell.configure(data[indexPath.row])
             cell.backgroundColor = .systemBackground
             
             return cell
@@ -77,17 +80,17 @@ extension MessageListViewController : UITableViewDelegate, UITableViewDataSource
         }
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = MessageViewController()
-        vc.userName = data[indexPath.section].userName
-        guard let profile = UIImage(named: "Logo") else { return  }
-        vc.userImage = profile
+        if let vc = UIStoryboard(name: "ETC", bundle: nil).instantiateViewController(withIdentifier: K.StoryBoard.messageVC) as? MessageViewController {
+            vc.userName = data[indexPath.row].userName
+            guard let profile = UIImage(named: "Logo") else { return  }
+            vc.userImage = profile
+            
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
         
-        self.navigationController?.pushViewController(vc, animated: true)
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 67
+        return 59
     }
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 5
-    }
+
 }
