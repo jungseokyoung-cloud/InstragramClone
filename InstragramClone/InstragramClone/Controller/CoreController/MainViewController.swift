@@ -100,7 +100,7 @@ extension MainViewController : UITableViewDataSource, UITableViewDelegate {
         switch indexPath.section{
         case 0:
             let cell = maintableView.dequeueReusableCell(withIdentifier: K.stroyCellID, for: indexPath) as! StoryCell
-            cell.configure()
+            cell.reloadData_()
             return cell
         case 1:
             let cell = maintableView.dequeueReusableCell(withIdentifier: K.feedCellID, for: indexPath) as! FeedCell

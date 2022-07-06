@@ -28,7 +28,7 @@ class StoryCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configure() {
+    func reloadData_() {
         print(1)
         storyCollectionView.reloadData()
         let indexPath = IndexPath(row: 0, section: 0)

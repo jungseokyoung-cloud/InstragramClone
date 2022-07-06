@@ -39,6 +39,8 @@
 		FECD9627287072D500A40160 /* ETC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FECD9626287072D500A40160 /* ETC.storyboard */; };
 		FECD962D287081B100A40160 /* MessaegListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECD962B287081B100A40160 /* MessaegListTableViewCell.swift */; };
 		FECD962E287081B100A40160 /* MessaegListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FECD962C287081B100A40160 /* MessaegListTableViewCell.xib */; };
+		FED8C8952875AB850052C37E /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED8C8932875AB850052C37E /* MessageTableViewCell.swift */; };
+		FED8C8962875AB850052C37E /* MessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FED8C8942875AB850052C37E /* MessageTableViewCell.xib */; };
 		FEF03117285F272C00F6259B /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF03116285F272C00F6259B /* FirstViewController.swift */; };
 		FEF95C4C285A334900D60766 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEF95C4B285A334800D60766 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -78,6 +80,8 @@
 		FECD9626287072D500A40160 /* ETC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ETC.storyboard; sourceTree = "<group>"; };
 		FECD962B287081B100A40160 /* MessaegListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessaegListTableViewCell.swift; sourceTree = "<group>"; };
 		FECD962C287081B100A40160 /* MessaegListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessaegListTableViewCell.xib; sourceTree = "<group>"; };
+		FED8C8932875AB850052C37E /* MessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
+		FED8C8942875AB850052C37E /* MessageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageTableViewCell.xib; sourceTree = "<group>"; };
 		FEF03116285F272C00F6259B /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		FEF95C4B285A334800D60766 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -235,6 +239,8 @@
 			children = (
 				FECD962B287081B100A40160 /* MessaegListTableViewCell.swift */,
 				FECD962C287081B100A40160 /* MessaegListTableViewCell.xib */,
+				FED8C8932875AB850052C37E /* MessageTableViewCell.swift */,
+				FED8C8942875AB850052C37E /* MessageTableViewCell.xib */,
 			);
 			path = Message;
 			sourceTree = "<group>";
@@ -304,6 +310,7 @@
 				FECD962E287081B100A40160 /* MessaegListTableViewCell.xib in Resources */,
 				FEB8B1A42859C7770010C6ED /* FeedCell.xib in Resources */,
 				FEB8B19A2859C2E30010C6ED /* StoryCell.xib in Resources */,
+				FED8C8962875AB850052C37E /* MessageTableViewCell.xib in Resources */,
 				FEF95C4C285A334900D60766 /* Assets.xcassets in Resources */,
 				FE3EC722284F558F0075F81C /* Main.storyboard in Resources */,
 			);
@@ -323,6 +330,7 @@
 				CEF42AE6285CDFF60022DDEE /* LoginViewController.swift in Sources */,
 				CEF42AEE285CE0600022DDEE /* SettingViewController.swift in Sources */,
 				FEF03117285F272C00F6259B /* FirstViewController.swift in Sources */,
+				FED8C8952875AB850052C37E /* MessageTableViewCell.swift in Sources */,
 				FEB8B19F2859C35D0010C6ED /* MyCollectionViewCell.swift in Sources */,
 				CEF42AF0285CE0660022DDEE /* EditProfileViewController.swift in Sources */,
 				FE9068662860A74100697B37 /* Extensions.swift in Sources */,

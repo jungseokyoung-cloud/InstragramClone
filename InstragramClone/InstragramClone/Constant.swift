@@ -45,5 +45,7 @@ struct K {
     struct Message {
         static let dmListNib = "MessaegListTableViewCell"
         static let dmListCellID = "MessageListCell"
+        static let dmNib = "MessageTableViewCell"
+        static let dmCell = "MessageCell"
     }
 }
