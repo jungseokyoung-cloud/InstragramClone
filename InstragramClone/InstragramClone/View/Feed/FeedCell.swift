@@ -19,7 +19,7 @@ class FeedCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        
+        self.profileImageView.layer.cornerRadius = profileImageView.bounds.size.width * 0.5
     }
     
     func printCell() {

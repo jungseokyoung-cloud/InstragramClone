@@ -12,7 +12,7 @@ class MyCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var progileImageView: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
-//        progileImageView.image = UIImage(named: "Logo")
-        // Initialization code
+//        progileImageView.layer.cornerRadius = 0.5 * progileImageView.bounds.size.width
+        self.layer.cornerRadius = 0.7 * self.bounds.size.width
     }
 }

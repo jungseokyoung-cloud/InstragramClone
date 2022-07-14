@@ -101,10 +101,12 @@ extension MainViewController : UITableViewDataSource, UITableViewDelegate {
         case 0:
             let cell = maintableView.dequeueReusableCell(withIdentifier: K.stroyCellID, for: indexPath) as! StoryCell
             cell.reloadData_()
+
             return cell
         case 1:
             let cell = maintableView.dequeueReusableCell(withIdentifier: K.feedCellID, for: indexPath) as! FeedCell
             cell.configure(with: feeds[indexPath.row])
+            print(cell.profileImageView.width)
             return cell
         default:
             return UITableViewCell()

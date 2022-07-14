@@ -17,7 +17,7 @@ class StoryCell: UITableViewCell {
         storyCollectionView.register(UINib(nibName: K.storyCell.cellNibName, bundle: nil), forCellWithReuseIdentifier: K.storyCell.cellId)
         storyCollectionView.delegate = self
         storyCollectionView.dataSource = self
-        
+
         
         storyCollectionView.showsHorizontalScrollIndicator = false
     }
