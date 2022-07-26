@@ -6,7 +6,6 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -345,7 +344,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="yzc-Zh-0HW">
                         <rightBarButtonItems>
-                            <barButtonItem title="Item" image="plus.message" catalog="system" style="plain" id="jug-xJ-bkf">
+                            <barButtonItem title="Item" image="plus.message" catalog="system" style="plain" id="jug-xJ-bkf" userLabel="messageButton">
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <connections>
                                     <action selector="messageButtonPressed:" destination="BYZ-38-t0r" id="ZvN-gI-nlM"/>
@@ -647,16 +646,7 @@
                                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
-                                                <cells>
-                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Iry-el-wHg">
-                                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="6NG-Dw-hba">
-                                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                                            <autoresizingMask key="autoresizingMask"/>
-                                                        </collectionViewCellContentView>
-                                                    </collectionViewCell>
-                                                </cells>
+                                                <cells/>
                                             </collectionView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -794,6 +784,52 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KPB-7M-2pp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-797" y="372"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="TdS-6Q-4wY">
+            <objects>
+                <viewController id="dpl-BK-2pG" customClass="ViewController" customModule="InstragramClone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8ZB-GC-SmQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이름!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nhs-Me-q9R">
+                                <rect key="frame" x="30" y="74" width="34.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="포스트 게시글 요약...포스트 게시글 요약...포스트" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VCA-mm-fjQ">
+                                <rect key="frame" x="79.5" y="74" width="325" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qk0-Ii-LIq">
+                                <rect key="frame" x="30" y="103" width="73" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="더보기..."/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="om8-dM-kHK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Nhs-Me-q9R" firstAttribute="top" secondItem="om8-dM-kHK" secondAttribute="top" constant="30" id="Ihh-Jm-G29"/>
+                            <constraint firstItem="VCA-mm-fjQ" firstAttribute="leading" secondItem="Nhs-Me-q9R" secondAttribute="trailing" constant="15" id="dBE-o5-SQy"/>
+                            <constraint firstItem="VCA-mm-fjQ" firstAttribute="top" secondItem="om8-dM-kHK" secondAttribute="top" constant="30" id="jGD-Xk-foX"/>
+                            <constraint firstItem="Nhs-Me-q9R" firstAttribute="leading" secondItem="om8-dM-kHK" secondAttribute="leading" constant="30" id="wm7-B1-HVS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="button" destination="Qk0-Ii-LIq" id="wW9-Yo-3Sa"/>
+                        <outlet property="label1" destination="Nhs-Me-q9R" id="sOj-Oc-Bjj"/>
+                        <outlet property="label2" destination="VCA-mm-fjQ" id="yFV-NR-vcP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g0Q-Tl-SD3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="351" y="-907"/>
         </scene>
     </scenes>
     <resources>

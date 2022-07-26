@@ -26,6 +26,8 @@
 		FE3EC722284F558F0075F81C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE3EC720284F558F0075F81C /* Main.storyboard */; };
 		FE3EC725284F558F0075F81C /* InstragramClone.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FE3EC723284F558F0075F81C /* InstragramClone.xcdatamodeld */; };
 		FE3EC72A284F55910075F81C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE3EC728284F55910075F81C /* LaunchScreen.storyboard */; };
+		FE5C61C5288ECEB600DCD899 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C61C3288ECEB600DCD899 /* TableViewCell.swift */; };
+		FE5C61C6288ECEB600DCD899 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE5C61C4288ECEB600DCD899 /* TableViewCell.xib */; };
 		FE7A8832286DB5D800D94FA9 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7A8831286DB5D800D94FA9 /* MessageViewController.swift */; };
 		FE7A8834286DB70600D94FA9 /* ETCModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7A8833286DB70600D94FA9 /* ETCModels.swift */; };
 		FE9068662860A74100697B37 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9068652860A74100697B37 /* Extensions.swift */; };
@@ -66,6 +68,8 @@
 		FE3EC724284F558F0075F81C /* InstragramClone.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = InstragramClone.xcdatamodel; sourceTree = "<group>"; };
 		FE3EC729284F55910075F81C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE3EC72B284F55910075F81C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE5C61C3288ECEB600DCD899 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		FE5C61C4288ECEB600DCD899 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		FE7A8831286DB5D800D94FA9 /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		FE7A8833286DB70600D94FA9 /* ETCModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCModels.swift; sourceTree = "<group>"; };
 		FE9068652860A74100697B37 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -238,6 +242,8 @@
 				FECD962B287081B100A40160 /* MessaegListTableViewCell.swift */,
 				FECD962C287081B100A40160 /* MessaegListTableViewCell.xib */,
 				CE3F1FFD287DB73900120285 /* MessageCell.swift */,
+				FE5C61C3288ECEB600DCD899 /* TableViewCell.swift */,
+				FE5C61C4288ECEB600DCD899 /* TableViewCell.xib */,
 			);
 			path = Message;
 			sourceTree = "<group>";
@@ -301,6 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEF42AA5285A3FCC0022DDEE /* SearchCollectionViewCell.xib in Resources */,
+				FE5C61C6288ECEB600DCD899 /* TableViewCell.xib in Resources */,
 				FECD9627287072D500A40160 /* ETC.storyboard in Resources */,
 				FEB8B1A02859C35D0010C6ED /* MyCollectionViewCell.xib in Resources */,
 				FE3EC72A284F55910075F81C /* LaunchScreen.storyboard in Resources */,
@@ -331,6 +338,7 @@
 				FE9068662860A74100697B37 /* Extensions.swift in Sources */,
 				FE7A8834286DB70600D94FA9 /* ETCModels.swift in Sources */,
 				FEB8B1A8285A04700010C6ED /* InstragramPost.swift in Sources */,
+				FE5C61C5288ECEB600DCD899 /* TableViewCell.swift in Sources */,
 				FE3EC725284F558F0075F81C /* InstragramClone.xcdatamodeld in Sources */,
 				FEB8B1882859B5B50010C6ED /* Constant.swift in Sources */,
 				FEB8B1992859C2E30010C6ED /* StoryCell.swift in Sources */,

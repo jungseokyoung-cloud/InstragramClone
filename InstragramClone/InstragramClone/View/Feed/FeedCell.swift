@@ -6,11 +6,14 @@
 //
 
 import UIKit
+//https://stackoverflow.com/questions/53367091/switch-view-controller-from-tableviewcell-class-in-swift
+//protocol CustomCellDelegate {
 
 class FeedCell: UITableViewCell {
 
     @IBOutlet weak var lableView: UIView!
     @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var commetView: UIView!
     @IBOutlet weak var postImageView: UIImageView!
     @IBOutlet weak var userNameLable: UILabel!
     @IBOutlet weak var locationLable: UILabel!
@@ -20,6 +23,8 @@ class FeedCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         self.profileImageView.layer.cornerRadius = profileImageView.bounds.size.width * 0.5
+        
+//        let gesture =
     }
     
     func printCell() {
@@ -27,15 +32,12 @@ class FeedCell: UITableViewCell {
         print(lableView.bounds.height)
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
     @IBAction func likeButtonPressed(_ sender: UIButton) {
+        print("like button pressed")
         
     }
     @IBAction func commentButtonPressed(_ sender: UIButton) {
+
     }
     
     @IBAction func sharedButtonPressed(_ sender: UIButton) {
@@ -53,5 +55,19 @@ class FeedCell: UITableViewCell {
         postImageView.image = UIImage(named: feed.mainPostImage)
         locationLable.text = feed.userLocation
         userPostLable.text = feed.userName
+    
     }
 }
+
+//extension FeedCell {
+//    @objc func postViewPressed(_ sender:UITapGestureRecognizer) {
+////        let vc = PostViewController()
+////        vc.modalPresentationStyle = .fullScreen
+////        if let parantVC = self.parentViewcon
+////        self.navigationController?.pushViewController(vc, animated: true)
+////
+////        print("go to detailed ")
+//    }
+//}
+
+

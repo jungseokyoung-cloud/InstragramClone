@@ -9,44 +9,58 @@ import UIKit
 
 class MessageCell: UITableViewCell {
     
-    let messageLabel = UILabel()
-    let messageView = UIView()
-    let profileImageView = UIImageView()
+    let messageLabel : UILabel = {
+        let label = UILabel()
+        label.numberOfLines = 0
+        return label
+    }()
+    let messageView : UIView = {
+        let view = UIView()
+        view.layer.cornerRadius = 5
+        view.layer.borderWidth = 1
+        view.layer.borderColor = UIColor.systemGray2.cgColor
+        return view
+    }()
+    let profileImageView : UIImageView = {
+        let imageView = UIImageView()
+        imageView.clipsToBounds = true
+        imageView.layer.cornerRadius = 20
+        return imageView
+    }()
     
-    var isIncoming : Bool! {
+    var messageModel : MessageModel! {
         didSet{
-            messageView.backgroundColor = isIncoming ? .clear : .systemGray2
-            messageView.layer.borderWidth = 1
-            messageView.layer.borderColor = UIColor.systemGray2.cgColor
+            print("didset")
+            messageView.backgroundColor = messageModel.isIncoming ? .clear : .systemGray2
+            
+            profileImageView.topAnchor.constraint(equalTo: topAnchor, constant: 5).isActive = true
+            profileImageView.widthAnchor.constraint(equalToConstant: 40).isActive = true
+            profileImageView.heightAnchor.constraint(equalToConstant: 40).isActive = true
+            
+            messageLabel.topAnchor.constraint(equalTo: profileImageView.centerYAnchor, constant: -8).isActive = true
+            messageLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -7).isActive = true
+            messageLabel.widthAnchor.constraint(lessThanOrEqualTo: widthAnchor, multiplier: 0.65).isActive = true
+            
+            if messageModel.isIncoming {
+                profileImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -5).isActive = true
+                messageLabel.trailingAnchor.constraint(equalTo: profileImageView.leadingAnchor, constant: -10).isActive = true
+                
+            } else {
+                profileImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 5).isActive = true
+                messageLabel.leadingAnchor.constraint(equalTo: profileImageView.trailingAnchor, constant: 10).isActive = true
+            }
+            messageView.leadingAnchor.constraint(equalTo: messageLabel.leadingAnchor, constant: -5).isActive = true
+            messageView.trailingAnchor.constraint(equalTo: messageLabel.trailingAnchor, constant: 5).isActive = true
+            messageView.bottomAnchor.constraint(equalTo: messageLabel.bottomAnchor, constant: 5).isActive = true
+            messageView.topAnchor.constraint(equalTo: messageLabel.topAnchor, constant: -5).isActive = true
+            messageLabel.text = messageModel.text
+            profileImageView.image = messageModel.userProfile
         }
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        messageView.translatesAutoresizingMaskIntoConstraints = false
-        messageLabel.translatesAutoresizingMaskIntoConstraints = false
-        profileImageView.translatesAutoresizingMaskIntoConstraints = false
-        
-        profileImageView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
-        profileImageView.widthAnchor.constraint(equalToConstant: 40).isActive = true
-        profileImageView.heightAnchor.constraint(equalToConstant: 40).isActive = true
-        
-        messageLabel.topAnchor.constraint(equalTo: topAnchor, constant: 7).isActive = true
-        messageLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -7).isActive = true
-        messageLabel.widthAnchor.constraint(lessThanOrEqualTo: widthAnchor, multiplier: 0.65).isActive = true
-        
-        if isIncoming {
-            profileImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -5).isActive = true
-            messageLabel.trailingAnchor.constraint(equalTo: profileImageView.leadingAnchor, constant: -10).isActive = true
 
-        } else {
-            profileImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 5).isActive = true
-            messageLabel.leadingAnchor.constraint(equalTo: profileImageView.trailingAnchor, constant: 10).isActive = true
-        }
-        messageView.leadingAnchor.constraint(equalTo: messageLabel.leadingAnchor, constant: -5).isActive = true
-        messageView.trailingAnchor.constraint(equalTo: messageLabel.trailingAnchor, constant: 5).isActive = true
-        messageView.bottomAnchor.constraint(equalTo: messageLabel.bottomAnchor, constant: 5).isActive = true
-        messageView.topAnchor.constraint(equalTo: messageLabel.topAnchor, constant: -5).isActive = true
+    override func prepareForReuse() {
+        super.prepareForReuse()
     }
     
     
@@ -56,10 +70,10 @@ class MessageCell: UITableViewCell {
         addSubview(messageView)
         addSubview(messageLabel)
         
-        messageView.layer.cornerRadius = 5
-        messageLabel.numberOfLines = 0
-    
-        
+        print("init now")
+        messageView.translatesAutoresizingMaskIntoConstraints = false
+        messageLabel.translatesAutoresizingMaskIntoConstraints = false
+        profileImageView.translatesAutoresizingMaskIntoConstraints = false
     }
     
     required init?(coder: NSCoder) {
@@ -67,10 +81,30 @@ class MessageCell: UITableViewCell {
     }
     
     func configure(_ data : MessageModel) {
-        messageLabel.text = data.text
-        profileImageView.image = data.userProfile
-        profileImageView.clipsToBounds = true
-        profileImageView.layer.cornerRadius = 20
+//        messageView.backgroundColor = data.isIncoming ? .clear : .systemGray2
+//
+//        profileImageView.topAnchor.constraint(equalTo: topAnchor, constant: 5).isActive = true
+//        profileImageView.widthAnchor.constraint(equalToConstant: 40).isActive = true
+//        profileImageView.heightAnchor.constraint(equalToConstant: 40).isActive = true
+//
+//        messageLabel.topAnchor.constraint(equalTo: profileImageView.centerYAnchor, constant: -8).isActive = true
+//        messageLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -7).isActive = true
+//        messageLabel.widthAnchor.constraint(lessThanOrEqualTo: widthAnchor, multiplier: 0.65).isActive = true
+//
+//        if data.isIncoming {
+//            profileImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -5).isActive = true
+//            messageLabel.trailingAnchor.constraint(equalTo: profileImageView.leadingAnchor, constant: -10).isActive = true
+//
+//        } else {
+//            profileImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 5).isActive = true
+//            messageLabel.leadingAnchor.constraint(equalTo: profileImageView.trailingAnchor, constant: 10).isActive = true
+//        }
+//        messageLabel.text = data.text
+//        profileImageView.image = data.userProfile
+//        messageView.leadingAnchor.constraint(equalTo: messageLabel.leadingAnchor, constant: -5).isActive = true
+//        messageView.trailingAnchor.constraint(equalTo: messageLabel.trailingAnchor, constant: 5).isActive = true
+//        messageView.bottomAnchor.constraint(equalTo: messageLabel.bottomAnchor, constant: 5).isActive = true
+//        messageView.topAnchor.constraint(equalTo: messageLabel.topAnchor, constant: -5).isActive = true
     }
 }
 

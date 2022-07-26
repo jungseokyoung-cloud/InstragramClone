@@ -38,15 +38,17 @@ class MessageViewController: UIViewController {
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: userNameLabel)
         self.navigationItem.leftItemsSupplementBackButton = true
         textView.clipsToBounds = true
-//        textView.layer.cornerRadius = textView.height/2
-//        textView.layer.borderWidth = 0.4
         textView.layer.borderColor = UIColor.lightGray.cgColor
         
         messageTableView.delegate = self
         messageTableView.dataSource = self
         messageTableView.register(MessageCell.self, forCellReuseIdentifier: K.Message.dmCell)
         messageTableView.rowHeight = UITableView.automaticDimension
-        
+        messageTableView.estimatedRowHeight = 70
+        messageTableView.allowsSelection = false
+//        
+//        let indexPath = IndexPath(row: messageTableView.numberOfRows(inSection: 0) - 1, section: 0)
+//        messageTableView.scrollToRow(at: indexPath, at: .middle, animated: false)
     }
     
     func congifureData() {
@@ -76,28 +78,25 @@ class MessageViewController: UIViewController {
 //MARK: - UITableViewDelegate, UITableViewDatasource
 extension MessageViewController : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //        return message.count
         return message.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if  let cell = messageTableView.dequeueReusableCell(withIdentifier: K.Message.dmCell, for: indexPath) as? MessageCell {
-            cell.isIncoming = message[indexPath.row].isIncoming
+            
+//            print("cell create!!!")
+            cell.messageModel = message[indexPath.row]
 
-            cell.configure(message[indexPath.row])
+//            cell.configure(message[indexPath.row])
             return cell
         }
         else{
             return UITableViewCell()
         }
     }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableView.automaticDimension
-    }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let idx = IndexPath(row: indexPath.row, section: indexPath.section)
-        let cell = messageTableView.cellForRow(at: idx)
-        print(cell?.height)
-    }
+//
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return UITableView.automaticDimension
+//    }
+
 }
