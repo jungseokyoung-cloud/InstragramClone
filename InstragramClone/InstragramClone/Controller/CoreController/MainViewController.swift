@@ -8,8 +8,6 @@
 import UIKit
 
 class MainViewController: UIViewController, UICollectionViewDelegate {
-    
-    
     let feeds = [
         InstagramPost(numOfLikes: 1999, userName: "정석영", userProfileImage: "Logo", mainPostImage: "Logo2", userLocation: "고양시"),
         InstagramPost(numOfLikes: 200000, userName: "정석영2", userProfileImage: "Logo", mainPostImage: "Logo2", userLocation: "노원구"),
@@ -90,7 +88,7 @@ extension MainViewController : UITableViewDataSource, UITableViewDelegate {
             return 696
         default:
             return 0
-        }
+        } // auto Height 로 변경
     }
     
     
@@ -106,7 +104,8 @@ extension MainViewController : UITableViewDataSource, UITableViewDelegate {
         case 1:
             let cell = maintableView.dequeueReusableCell(withIdentifier: K.feedCellID, for: indexPath) as! FeedCell
             cell.configure(with: feeds[indexPath.row])
-            print(cell.profileImageView.width)
+            cell.delegate = self
+            cell.selectionStyle = .none
             return cell
         default:
             return UITableViewCell()
@@ -128,5 +127,29 @@ extension MainViewController : UITabBarDelegate, UITabBarControllerDelegate {
         }
         
         return true
+    }
+}
+
+
+extension MainViewController : CustomCellDelegate {
+    func launchVC() {
+        let vc = PostViewController()
+        vc.modalPresentationStyle = .fullScreen
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y == 0 {
+                self.view.frame.origin.y -= keyboardSize.height
+            }
+        }
+    }
+
+    @objc func keyboardWillHide(notification: NSNotification) {
+        if self.view.frame.origin.y != 0 {
+            self.view.frame.origin.y = 0
+        }
     }
 }

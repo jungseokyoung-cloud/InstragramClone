@@ -28,7 +28,7 @@ class MessageListViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = .systemBackground
         self.tabBarController?.tabBar.isHidden = true
-
+        
         configureModel()
         setBackButton()
         view.addSubview(messageListTableView)
@@ -40,7 +40,10 @@ class MessageListViewController: UIViewController {
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: userNameLabel)
         self.navigationItem.leftItemsSupplementBackButton = true
         // Do any additional setup after loading the view.
-    }
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+}
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
@@ -56,7 +59,7 @@ class MessageListViewController: UIViewController {
             
         }
     }
-
+    
     override func viewWillDisappear(_ animated: Bool) {
         self.tabBarController?.tabBar.isHidden = false
     }
@@ -64,7 +67,7 @@ class MessageListViewController: UIViewController {
 }
 
 extension MessageListViewController : UITableViewDelegate, UITableViewDataSource {
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count
     }

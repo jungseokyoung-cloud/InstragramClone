@@ -6,8 +6,10 @@
 //
 
 import UIKit
-//https://stackoverflow.com/questions/53367091/switch-view-controller-from-tableviewcell-class-in-swift
-//protocol CustomCellDelegate {
+protocol CustomCellDelegate : AnyObject{
+    func launchVC()
+//    @objc func keyboardWillShow(notification: NSNotification)
+}
 
 class FeedCell: UITableViewCell {
 
@@ -19,12 +21,18 @@ class FeedCell: UITableViewCell {
     @IBOutlet weak var locationLable: UILabel!
     @IBOutlet weak var likesLabel: UILabel!
     @IBOutlet weak var userPostLable: UILabel!
+    @IBOutlet weak var commentProfileImageView: UIImageView!
+    
+    weak var delegate : CustomCellDelegate?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         self.profileImageView.layer.cornerRadius = profileImageView.bounds.size.width * 0.5
-        
-//        let gesture =
+        self.commentProfileImageView.layer.cornerRadius = commentProfileImageView.bounds.size.width * 0.5
+
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(postViewPressed(_:)))
+        lableView.addGestureRecognizer(gesture)
     }
     
     func printCell() {
@@ -52,22 +60,18 @@ class FeedCell: UITableViewCell {
         likesLabel.text = "좋아요 \(feed.getNumOfLikesString())개"
         userNameLable.text = feed.userName
         profileImageView.image = UIImage(named: feed.userProfileImage)
+        commentProfileImageView.image = UIImage(named: feed.userProfileImage)
         postImageView.image = UIImage(named: feed.mainPostImage)
         locationLable.text = feed.userLocation
         userPostLable.text = feed.userName
-    
+        
     }
 }
 
-//extension FeedCell {
-//    @objc func postViewPressed(_ sender:UITapGestureRecognizer) {
-////        let vc = PostViewController()
-////        vc.modalPresentationStyle = .fullScreen
-////        if let parantVC = self.parentViewcon
-////        self.navigationController?.pushViewController(vc, animated: true)
-////
-////        print("go to detailed ")
-//    }
-//}
+extension FeedCell {
+    @objc func postViewPressed(_ sender:UITapGestureRecognizer) {
+        delegate?.launchVC()
+    }
+}
 
 

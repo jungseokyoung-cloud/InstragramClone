@@ -12,40 +12,38 @@ class MessageTableViewCell: UITableViewCell {
     @IBOutlet weak var myProfileImage: UIImageView!
     @IBOutlet weak var otherProfileImage: UIImageView!
     @IBOutlet weak var messageBody: UILabel!
-    @IBOutlet weak var messageBubble: UIView!
     let messageColor = UIColor.systemGray2
     
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        messageBody.numberOfLines = 0
         
-        messageBubble.clipsToBounds = true
-        messageBubble.layer.cornerRadius = messageBubble.height / 2
-        messageBubble.layer.borderWidth = 0.4
-        messageBubble.layer.borderColor = messageColor.cgColor
-        
-        messageBody.translatesAutoresizingMaskIntoConstraints = false
-        messageBubble.translatesAutoresizingMaskIntoConstraints = false
-
-        messageBubble.backgroundColor = .systemCyan
-        
-        
-        myProfileImage.layer.cornerRadius = myProfileImage.bounds.size.width * 0.5
-        otherProfileImage.layer.cornerRadius = myProfileImage.bounds.size.width * 0.5
-        
+        // Initialization code
     }
-
+    
+    func creatMessageBody(){
+        //        let messageSuperView = self.messageBody.superview
+        messageBody.frame.size = messageBody.sizeThatFits(CGSize(width: (self.frame.width / 3) * 2, height: self.frame.height))
+        messageBody.clipsToBounds = true
+        messageBody.layer.cornerRadius = messageBody.height / 2
+        messageBody.layer.borderWidth = 0.4
+        messageBody.layer.borderColor = messageColor.cgColor
+        messageBody.translatesAutoresizingMaskIntoConstraints = false
+        otherProfileImage.translatesAutoresizingMaskIntoConstraints = false
+        myProfileImage.translatesAutoresizingMaskIntoConstraints = false
+    }
     
     
     func configure(_ data : MessageModel, _ isMe : Bool) {
+        creatMessageBody()
         messageBody.text = data.messageBody
-        messageBody.widthAnchor.constraint(lessThanOrEqualToConstant: 250).isActive = true
-        
+    
+        myProfileImage.layer.cornerRadius = myProfileImage.bounds.size.width * 0.5
+        otherProfileImage.layer.cornerRadius = myProfileImage.bounds.size.width * 0.5
         if (isMe == true) {
             otherProfileImage.isHidden = true
-            messageBubble.leadingAnchor.constraint(equalTo: myProfileImage.trailingAnchor, constant: 10).isActive = true
-            messageBubble.centerYAnchor.constraint(equalTo: myProfileImage.centerYAnchor).isActive = true
+            messageBody.leadingAnchor.constraint(equalTo: myProfileImage.trailingAnchor).isActive = true
+            messageBody.centerYAnchor.constraint(equalTo: myProfileImage.centerYAnchor).isActive = true
             
             myProfileImage.image = data.userName
             
@@ -53,18 +51,11 @@ class MessageTableViewCell: UITableViewCell {
             myProfileImage.isHidden = true
             messageBody.backgroundColor = messageColor
             otherProfileImage.image = data.userName
+            messageBody.centerYAnchor.constraint(equalTo: otherProfileImage.centerYAnchor).isActive = true
 
-            messageBubble.trailingAnchor.constraint(equalTo: otherProfileImage.leadingAnchor, constant: -10).isActive = true
-            messageBubble.centerYAnchor.constraint(equalTo: otherProfileImage.centerYAnchor).isActive = true
-
+            messageBody.trailingAnchor.constraint(equalTo: otherProfileImage.leadingAnchor).isActive = true
         }
-        messageBody.topAnchor.constraint(equalTo: messageBubble.topAnchor, constant: 5).isActive = true
-        messageBody.leadingAnchor.constraint(equalTo: messageBubble.leadingAnchor, constant: 5).isActive = true
-        messageBody.bottomAnchor.constraint(equalTo: messageBubble.bottomAnchor, constant: -5).isActive = true
-        messageBody.trailingAnchor.constraint(equalTo: messageBubble.trailingAnchor, constant: -5).isActive = true
-        print((self.width/4) * 3)
-        print(self.messageBody.width)
-        print("print")
+        messageBody.backgroundColor = .systemRed
         //        self.addSubview(messageBody)
         
     }
